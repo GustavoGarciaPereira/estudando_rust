@@ -6,5 +6,4 @@ fn main() {
     let emoji = "🦀 ⚙️ ";
     let _colo = vec![12,23];
     println!("hello, gustavo no rust!\n\n  ({})\n\n({})",emoji,name);
-
 }
