@@ -1,3 +1,5 @@
+use std::io::stdin;
+
 fn retorna_um(a:i32,b:i32) -> i32{
     a+b
 }
@@ -12,6 +14,15 @@ where F:Fn(i32) -> i32{
     func(n)
 }
 
+fn input_concatenar() -> String{
+    let mut buf = String::new();
+    
+    if let Ok(_c) = stdin().read_line(&mut buf) {
+        buf
+    } else {
+        panic!("todo mundo em panic!")
+    } 
+}
 
 fn main() {
 
@@ -33,5 +44,8 @@ fn main() {
 
     
     println!("{}",retorna_um(2,3));
+
+    println!("{}",input_concatenar());
+
     println!("Hello, world!");
 }
